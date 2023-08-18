@@ -32,10 +32,10 @@ public class Leet34 {
             }
             else {
                 ans =mid;
-                if (b) {
-                    end = mid - 1;
-                } else {
-                    start = mid + 1;
+                if (b)
+                {end = mid - 1;
+                }
+                else {start = mid + 1;
                 }
             }
 
