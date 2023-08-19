@@ -7,10 +7,12 @@ public class Leet34 {
     public static int[] searchRange(int[] nums, int target) {
 
         int [] arr={-1,-1};
-        int first =value(nums,target,true);
-        int last =value(nums,target,false);
-        arr[0]=first;
-        arr[1]=last;
+        arr[0] =value(nums,target,true);
+
+        if(arr[0]!=-1) {
+            arr[1]= value(nums, target, false);
+        }
+
 
         return arr;
 
