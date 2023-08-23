@@ -1,4 +1,4 @@
-package Sorting.Selction.Binarysreach;
+package BInarySreachQutions;
 
  class Bit {
     static int sreach(int [] arr,int target) {

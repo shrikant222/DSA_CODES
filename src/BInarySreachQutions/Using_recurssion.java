@@ -1,4 +1,4 @@
-package Sorting.Selction.Binarysreach;
+package BInarySreachQutions;
 
 public class Using_recurssion {
     static int sreach(int []arr,int start, int end, int target){
