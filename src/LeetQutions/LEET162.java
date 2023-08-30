@@ -1,8 +1,15 @@
 package LeetQutions;
 
-public class LEET162 {
 
-<<<<<<< Updated upstream
+class LEET162{
+    public static void main(String[] args) {
+
+    }
+    public static void search(int[]arr) {
+
+    }
+
+
     // https://leetcode.com/problems/peak-index-in-a-mountain-array/
     // https://leetcode.com/problems/find-peak-element/
     public static int peakIndexInMountainArray(int[] arr) {
@@ -30,12 +37,6 @@ public class LEET162 {
     }
 
 
-    public static void main(String[] args) {
-        int [] arr={1,2,3,4,5,6,7,8,9,10};
-        System.out.println( peakIndexInMountainArray(arr));
-    }
-}
-=======
         public static int binary(int[]arr){
             int start =0;
             int end = arr.length-1;
@@ -64,17 +65,12 @@ public class LEET162 {
             return start; // or return end as both are =
         }
 
-
-        public static void main(String[] args) {
-
-            int[] arr = {1,2,1,3,5,6,4};
-            System.out.println(binary(arr));
         }
 
 
 
 
-    }
 
 
->>>>>>> Stashed changes
+
+

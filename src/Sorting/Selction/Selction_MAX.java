@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 import static Sorting.Selction.Selection_Sort.swap;
 
-class TEST{
+class Selction_MAX{
     public static void main(String [] args){
         int[] arr = {3,  1,5,4,0,-22,2};
         sort(arr);

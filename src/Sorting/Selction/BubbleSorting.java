@@ -9,15 +9,15 @@ public class BubbleSorting {
         for(int i=0;i<arr.length;i++){
             // for each step max item will come at the last respective index.
             boolean swap =false;
-            for(int j=1;j<arr.length-i;j++)
+            for(int j=0;j<arr.length-i-1;j++)
             {
 
                 // swap if the item is samller than previous item
-                if(arr[j]<arr[j-1])
+                if(arr[j+1]<arr[j])
                 {
                     int temp=arr[j];
-                    arr[j]=arr[j-1];
-                    arr[j-1]=temp;
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
                     swap =true;
                 }
 

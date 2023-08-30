@@ -1,38 +1,33 @@
 package BInarySreachQutions;
 
 
+import java.util.Arrays;
+
 class TRY {
     public static void main(String[] args) {
-        int[] arr = {0,1};
-//        System.out.println(findPivot(arr));
-        System.out.println( search(arr,0));
+        int[][] arr={
+                {1,2,3,4,5},
+                {5,6,7,8,9,10},
+                {9,9,11,12},
+
+        };
+        System.out.println(Arrays.toString(Two(arr,9)));
     }
-        public static int search(int[] nums, int target) {
-            int start = 0, end = nums.length - 1;
+    public static int[] Two(int[][]arr, int target){
+        for (int i = arr.length-1; i >=0; i--) {
+            for (int j = arr[i].length -1; j >=0; j--) {
+              if(arr[i][j]==target){
+                  return new int []{i, j};
 
-            while (start <= end) {
-                int mid = (start + end) / 2;
-
-                if (nums[mid] == target) {
-                    return mid;
-                }
-
-                if (nums[start] <= nums[mid]) {
-                    if (nums[start] <= target && target < nums[mid]) {
-                        end = mid - 1;
-                    } else {
-                        start = mid + 1;
-                    }
-                } else {
-                    if (nums[mid] < target && target <= nums[end]) {
-                        start = mid + 1;
-                    } else {
-                        end = mid - 1;
-                    }
-                }
+              }
             }
 
-            return -1;
         }
+
+
+
+        return new int[]{-1,-1};
+    }
+
 
 }
