@@ -1,9 +1,9 @@
 package Arrays.kk;
 
 import java.util.Arrays;
-
+//https://leetcode.com/problems/search-in-rotated-sorted-array/
 public class leet34 {
-    public static   int[] searchRange(int[] nums, int target) {
+    public static  int[] searchRange(int[] nums, int target) {
 
         int [] ans ={-1,-1};
         int start = find(nums,target,true);

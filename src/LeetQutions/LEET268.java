@@ -2,7 +2,7 @@ package LeetQutions;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
-//Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+
 public class LEET268 {
     public static int missingNumber(int []arr){
         cSort(arr);
@@ -19,10 +19,10 @@ public class LEET268 {
         int i=0;
         while(i< arr.length){
             int corr_inx=arr[i];
-            if(corr_inx>arr.length-1){
-                i++; continue;
-            }
-            if(corr_inx!=i){
+//            if(corr_inx>arr.length-1){
+//                i++; continue;
+//            }//ignore the number who's inedx is out of bound
+            if(corr_inx<arr.length&& arr[corr_inx]!=arr[i] ){
                 int temp=arr[corr_inx];
                 arr[corr_inx]=arr[i];
                 arr[i]=temp;

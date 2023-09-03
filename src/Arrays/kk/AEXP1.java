@@ -10,18 +10,19 @@ public class AEXP1 {
         for (int i = 0; i <nums.length ; i++)
         {
             int num=nums[i];
-            String str= String.valueOf(num);
-            System.out.println(str);
+            String str= String.valueOf(nums[i]);
+            if(str.length()%2==0) evenNum++;
+
 
         }
-        return 0;
+        return evenNum;
     }
 
 
     public static void main(String[] args) {
         int[] gain = {12,20,233,7896};
-        System.out.println(gain
-        );
+//        System.out.println(Arrays.toString(gain));
+        System.out.println(findNumbers(gain));
     }
 
 }

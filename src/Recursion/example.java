@@ -2,8 +2,8 @@ package Recursion;
 
 public class example {
     static void print1(int n){
-        if(n==10) return;
-        print1(n+1);
+        if(n==0) return;
+        print1(n-1);
         System.out.println(n);
 
     }
