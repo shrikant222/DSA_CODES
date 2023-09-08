@@ -36,35 +36,35 @@ public class Rotated_Arr_Dublicate {
         return -1;
     }
 
-//    public static int search(int[] arr, int target){
-//        int p= pivot(arr);
-//        if(arr[p]==target) return p;
-//        else if (binary(arr,target,0,p-1)!=-1){
-//            return binary(arr,target,0,p-1);
-//        }
-//        else return binary (arr, target, p+1, arr.length);
-//
-//
-//    }
-//
-//    public static int binary(int[]arr,int target, int start, int end){
-//
-//
-//        while(end>=start){
-//            int mid = start+(end -start)/2;
-//            if(arr[mid]>target){
-//                end =mid-1;
-//            }
-//            else if (arr[mid]<target) {
-//                start =mid+1;
-//            }
-//
-//            else{
-//                return mid;
-//            }
-//
-//
-//        }
-//        return -1;
-//    }
+    public static int search(int[] arr, int target){
+        int p= pivot(arr);
+        if(arr[p]==target) return p;
+        else if (binary(arr,target,0,p-1)!=-1){
+            return binary(arr,target,0,p-1);
+        }
+        else return binary (arr, target, p+1, arr.length);
+
+
+    }
+
+    public static int binary(int[]arr,int target, int start, int end){
+
+
+        while(end>=start){
+            int mid = start+(end -start)/2;
+            if(arr[mid]>target){
+                end =mid-1;
+            }
+            else if (arr[mid]<target) {
+                start =mid+1;
+            }
+
+            else{
+                return mid;
+            }
+
+
+        }
+        return -1;
+    }
 }

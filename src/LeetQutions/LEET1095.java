@@ -2,75 +2,60 @@ package LeetQutions;
 
 public class LEET1095 {
     //https://leetcode.com/problems/find-in-mountain-array/
+
     public static void main(String[] args) {
-        int [] arr={1,2,4,5,6,7,8,9,5,2,3,1,0};
-        int target=3;
-     if(Asc(arr,target)!=-1){
-         System.out.println(Asc(arr,target));
-     }
-     else {
-
-         System.out.println(Dsc(arr,target));
-
-     }
+        int[] arr = {0,2,1};
+        int target = 3;
+        System.out.println(search(arr,target));
     }
 
-    public static int peak(int [] arr){
-      int start =0,end = arr.length-1;
-      while(start<end){
-          int mid = start +(end-start)/2;
-          if(arr[mid]>arr[mid+1]){
-              end=mid;
-          }
-          else {
-              start=mid+1;
-          }
-      }
-        return end;
+    public static int search(int []arr,int t)
+    {int peak=peak(arr);
+        if(arr[peak]==t)return peak;
+        if(OABS(arr,0,peak-1,t)!=-1) return OABS(arr,0,peak-1,t);
+        else return OABS(arr,peak+1, arr.length-1,t);
+
     }
-    public static int Asc(int arr[], int target)
-        {
-            int start =0;
-            int end = peak(arr);
-
-            while(end>=start){
-                int mid = start+(end -start)/2;
-                if(arr[mid]>target){
-                    end =mid-1;
-                }
-                else if (arr[mid]<target) {
-                    start =mid+1;
-                }
-
-                else{
-                    return mid;
-                }
-            }
-            return -1;
-        }
-    public static int Dsc(int arr[], int target)
+    public static int peak(int []arr)
     {
-        int start =peak(arr);
-        int end =arr.length-1 ;
-
-        while(end>=start){
-            int mid = start+(end -start)/2;
-            if(arr[mid]>target){
-                start=mid+1;
+        int s=0, e=arr.length;
+        while (s<e){
+            int mid=s+(e-s)/2;
+            if(arr[mid]<arr[mid+1])
+            {
+                s=mid+1;
             }
-            else if (arr[mid]<target) {
-                end =mid-1;
+            else
+            {
+                e=mid;
             }
+        }
+        return s;
+    }
 
-            else{
-                return mid;
+    public static int OABS(int []arr,int s, int e,int t)
+    {
+        boolean y=arr[s]<arr[e];
+        while (s<e){
+            int mid=s+(e-s)/2;
+            if(arr[mid]==t) return mid;
+            if(y){
+                if(arr[mid]<t){
+                    s=mid+1;
+                }
+                else {
+                    e=mid-1;
+                }
             }
-
-
+            else {
+                if (arr[mid] > t) {
+                    s = mid + 1;
+                } else {
+                    e = mid - 1;
+                }
+            }
         }
         return -1;
     }
-
-
 
 }
