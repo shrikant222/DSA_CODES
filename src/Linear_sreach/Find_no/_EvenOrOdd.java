@@ -10,7 +10,8 @@ public class _EvenOrOdd {
 
     }
 
-    static int evenodd(int []arr){
+    static int evenodd(int []arr)
+    {
         int count=0;
 
             for(int j=0;j< arr.length;j++){

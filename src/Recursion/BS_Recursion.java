@@ -31,7 +31,7 @@ public class BS_Recursion {
 
     }
     public static void main(String[] args) {
-        int arr []={8,9,10,11,12,13,1,2,3,4,5};
+        int[] arr ={8,9,10,11,12,13,1,2,3,4,5};
         System.out.println(BS(arr,5,0,arr.length-1));
 //        System.out.println(arr[BS(arr,6,0,arr.length-1)]);
     }

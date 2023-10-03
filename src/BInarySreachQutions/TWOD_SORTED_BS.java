@@ -22,7 +22,7 @@ public class TWOD_SORTED_BS {
             return new int[]{row,col};
         }
         if(arr[row][col]<target){
-          return   binary(arr,target,row,0,arr[row].length);
+          return binary(arr,target,row,0,arr[row].length);
         }
         else{
             row--;

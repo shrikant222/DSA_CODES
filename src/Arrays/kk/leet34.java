@@ -17,7 +17,7 @@ public class leet34 {
         int start =0;
         int end  =nums.length;
         while (end>=start){
-            int mid = start+(end -start)/2;
+            int mid = start+(end - start)/2;
             if(target<nums[mid]){
                 end = mid-1;
 

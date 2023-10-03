@@ -1,4 +1,4 @@
-//package Arrays.kk;
+package Arrays.kk;//package Arrays.kk;
 //
 //
 //
