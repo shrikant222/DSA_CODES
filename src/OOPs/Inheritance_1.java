@@ -21,7 +21,7 @@ public class Inheritance_1 {
 class Child extends Inheritance_1{
     int c;
     public Child(int a,float b,int c ) {
-//        super(a,b);
+        super(a,b);
         this.c=c;
          }
 
