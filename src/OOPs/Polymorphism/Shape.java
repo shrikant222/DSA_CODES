@@ -1,7 +1,7 @@
 package OOPs.Polymorphism;
 
 public class Shape {
-    public void area(){
+     public void area(){
         System.out.println("im in shape");
     }
 }
@@ -12,7 +12,7 @@ class Circle extends Shape{
     }
 }
 class Square extends Shape{
-    @Override
+
     public void area(){
         System.out.println("Square");
     }

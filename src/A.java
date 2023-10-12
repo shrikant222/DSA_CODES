@@ -2,14 +2,21 @@ import java.util.Arrays;
 
 public class A {
     public static void main(String[] args) {
-        System.out.println(sum(123,0));
+        int [] arr={1,2,3,4,5,6,7,8,9,10};
+        int start=0;
+        int end = arr.length-1;
+        int target=10;
+        while(start<=end){
+            int mid = start+(end -start)/2;
+//            int mid =start+(start-end)/2;
+            if (arr[mid]==target) {System.out.println("found at index "+mid); return;}
+            else if(arr[mid]<target){ start=mid+1;}
+            else end = mid-1;
+        }
+        System.out.println("not found");
 
     }
-public static int sum(int num, int sum){
-if(num/10==0) return num;
-sum=sum+(num%10);
-return sum(num/10,sum);
 
 }
-}
+
 
