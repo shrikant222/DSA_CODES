@@ -2,6 +2,9 @@ package OOPs.AbstaractClass;
 
 abstract class parent{
     int age;
+    static void hello(){
+        System.out.println("hello");
+    }
     abstract void career(String name);
 }
 class son extends parent{
@@ -12,6 +15,7 @@ class son extends parent{
 
     public static void main(String[] args) {
         son s = new son();
+        hello();
         s.career("one");
     }
 }

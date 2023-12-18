@@ -1,22 +1,90 @@
-import java.util.Arrays;
+import java.util.Scanner;
 
-public class A {
-    public static void main(String[] args) {
-        int [] arr={1,2,3,4,5,6,7,8,9,10};
-        int start=0;
-        int end = arr.length-1;
-        int target=10;
-        while(start<=end){
-            int mid = start+(end -start)/2;
-//            int mid =start+(start-end)/2;
-            if (arr[mid]==target) {System.out.println("found at index "+mid); return;}
-            else if(arr[mid]<target){ start=mid+1;}
-            else end = mid-1;
+ class BankersAlgorithm {
+    private int need[][];
+    private int allocation[][];
+    private int max[][];
+    private int available[];
+    private int numberOfProcesses;
+    private int numberOfResources;
+
+    public void input() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter number of processes: ");
+        numberOfProcesses = scanner.nextInt();
+
+        System.out.print("Enter number of resources: ");
+        numberOfResources = scanner.nextInt();
+
+        need = new int[numberOfProcesses][numberOfResources];
+        allocation = new int[numberOfProcesses][numberOfResources];
+        max = new int[numberOfProcesses][numberOfResources];
+        available = new int[numberOfResources];
+
+        System.out.println("Enter allocation matrix:");
+        for (int i = 0; i < numberOfProcesses; i++) {
+            for (int j = 0; j < numberOfResources; j++) {
+                allocation[i][j] = scanner.nextInt();
+            }
         }
-        System.out.println("not found");
+
+        System.out.println("Enter max matrix:");
+        for (int i = 0; i < numberOfProcesses; i++) {
+            for (int j = 0; j < numberOfResources; j++) {
+                max[i][j] = scanner.nextInt();
+            }
+        }
+
+        System.out.println("Enter available matrix:");
+        for (int j = 0; j < numberOfResources; j++) {
+            available[j] = scanner.nextInt();
+        }
+
 
     }
 
+    public void calculateNeed() {
+        for (int i = 0; i < numberOfProcesses; i++) {
+            for (int j = 0; j < numberOfResources; j++) {
+                need[i][j] = max[i][j] - allocation[i][j];
+            }
+        }
+    }
+
+    public boolean isSafe() {
+        boolean[] finish = new boolean[numberOfProcesses];
+        int[] safeSequence = new int[numberOfProcesses];
+        int[] work = new int[numberOfResources];
+
+        for (int i = 0; i < numberOfResources; i++) {
+            work[i] = available[i];
+        }
+
+        int count = 0;
+        while (count < numberOfProcesses) {
+
+           count++;
+        }
+
+        if (count == numberOfProcesses) {
+            System.out.println("System is in safe state.");
+            System.out.print("Safe sequence is: ");
+            for (int i = 0; i < numberOfProcesses; i++) {
+                System.out.print(safeSequence[i] + " ");
+            }
+            System.out.println();
+            return true;
+        } else {
+            System.out.println("System is in unsafe state.");
+            return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        BankersAlgorithm bankersAlgorithm = new BankersAlgorithm();
+        bankersAlgorithm.input();
+        bankersAlgorithm.calculateNeed();
+        bankersAlgorithm.isSafe();
+    }
 }
-
-

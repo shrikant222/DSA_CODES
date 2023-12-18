@@ -2,10 +2,15 @@ package OOPs.AbstaractClass;
 
 interface a{
     void add();
+    default void sub(){
+        System.out.println("sub");
+    }
 
 }
-interface b{
+interface b extends a {
     int square(int n);
+    @Override
+    void add();
 }
 
 abstract  class c implements a,b{
