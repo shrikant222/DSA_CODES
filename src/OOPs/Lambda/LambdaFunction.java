@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class LambdaFunction  {
 
+    int sum(int a, int b){
+        return a+b;
+    }
+
 
     public static void main(String[] args) {
         ArrayList<Integer> arr = new ArrayList<>();

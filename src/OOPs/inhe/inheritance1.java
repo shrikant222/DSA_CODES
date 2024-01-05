@@ -1,6 +1,6 @@
 package OOPs.inhe;
 
-public class inheritance1 {
+public class inheritance1 implements Cloneable {
     int num;
     float f;
 
@@ -31,6 +31,7 @@ public class inheritance1 {
 
     public static void main(String[] args) throws CloneNotSupportedException {
         inheritance1 obj = new inheritance1(10,10.0f);
+        obj.clone();
 
     }
 

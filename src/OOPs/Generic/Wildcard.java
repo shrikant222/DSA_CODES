@@ -18,31 +18,7 @@ public class Wildcard<T extends Integer> {  //wildcard
 //    public static void getList(List<Number> list){
 //        //here we can pass only Number but not subclass
 //    }
-    public static void getList(List<? extends  Number>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                       list)
+    public static void getList(List<? extends  Number> list)
     {
     //here we can pass  not only Number but subclass also
         System.out.println(list);

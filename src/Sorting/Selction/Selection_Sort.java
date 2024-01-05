@@ -23,7 +23,7 @@ static int maxindex(int[] arr,int start , int last_index){
 }
 
 
-    static void swap(int[] arr,int firest, int second ){
+    public static void swap(int[] arr, int firest, int second){
 
         int temp=arr[firest];
         arr[firest]=arr[second];

@@ -14,19 +14,29 @@ public class Arraylist_Generic<T> {
         int default_size = 10;
         this.data = new Object[default_size];
     }
+
+    @Override
+    public String toString() {
+        return "Arraylist_Generic{" +
+                "data=" + Arrays.toString(data) +
+                ", size=" + size +
+                '}';
+    }
+
     public void add(T num)
     {   if(isfull())
     {
-            resize();
+           resize();
     }
-        data[size++]=num;
+          data[size++]=num;
     }
-    public void getAll()
+    public T get(int index)
     {
-        for (int i = 0; i <size; i++)
-        {
-            System.out.println(data[i]);
-        }
+        return (T)data[index];
+    }
+    public T remove(){
+        T removed = (T)(data[--size]);
+        return removed;
     }
 
     private void resize() {
@@ -38,25 +48,13 @@ public class Arraylist_Generic<T> {
     private boolean isfull() {
         return data.length==size;
     }
-    private Object get(int i) {
-        return  data[i];
-    }
-    @Override
-    public String toString() {
-        return "Arraylist={" +
-                "data=" + Arrays.toString(data) +
-                ", size=" +  size+
-                '}';
-    }
 
     public static void main(String[] args) {
         Arraylist_Generic<String> list = new Arraylist_Generic<>();
-        ArrayList<String> a = new ArrayList<>();
-
-list.add("hello");
-list.add("world");
-
-        list.getAll();
+        list.add("hello");
+        list.add("world");
+        list.add("hello");
+        System.out.println(list);
 
     }
 

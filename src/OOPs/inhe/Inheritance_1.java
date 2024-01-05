@@ -91,7 +91,8 @@ import OOPs.inhe.*;
          // Access method depends on ref variable not on constructor
          Box box1 = new Price(1);
 //         box1.weight
-         System.out.println(box1.l+" "+box1.h+" "+box1.w);
+        Box bo = new Box(box1);
+         System.out.println(bo.w);
 
 //         BoxWeight box1 = new Box(); error
 
