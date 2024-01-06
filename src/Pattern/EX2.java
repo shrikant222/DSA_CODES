@@ -90,7 +90,7 @@ public class EX2 {
 
     public static void main(String[] args) {
         int n=5;
-        pattern17(n);
+        pattern6(n);
     }
     static void pattern30(int n) {
 
