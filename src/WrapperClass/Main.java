@@ -1,10 +1,15 @@
 package WrapperClass;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
-      int[] nums= {8,1,2,2,3};
-
-        System.out.println( smallerNumbersThanCurrent(nums));
+      double E =Math.E;
+        System.out.println(E);
+        double x=Math.pow(2,3);
+        double y=Math.sqrt(16);
+        System.out.println(x);
+        System.out.println(y);
     }
 
     public static int[] smallerNumbersThanCurrent(int[] nums) {

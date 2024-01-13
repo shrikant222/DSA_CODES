@@ -1,6 +1,7 @@
 package Arrays.kk;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayList2 {
 //A resizeable Array
@@ -8,7 +9,7 @@ public class ArrayList2 {
 
     public static void main(String[] args) {
         int [] arr = new int[10];
-        ArrayList<String> one= new ArrayList<String>();
+        List<String> one= new ArrayList<String>();
         ArrayList<Boolean> two= new ArrayList<>();
         ArrayList<Integer> three= new ArrayList<>();
         ArrayList<Boolean> four= new ArrayList<>();

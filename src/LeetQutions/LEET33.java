@@ -5,9 +5,9 @@ public class LEET33 {
 
     public static void main(String[] args) {
 
-        int[] arr = {  3, 1};
+        int[] arr = {  10,12,2,5,6,8,9};
         System.out.println(pivot(arr));
-        System.out.println(search(arr,1));
+        System.out.println(search(arr,2));
         int t = 2;
     }
 
@@ -72,11 +72,11 @@ public class LEET33 {
          else if (mid < end && arr[mid] > arr[mid + 1]) {
                 return mid;
             }
-          else if (arr[mid] <=arr[end]) {
-                start = mid + 1;
+          else if (arr[mid] <=arr[start]) {
+                end=mid-1;
             }
             else  {
-                end = mid - 1;
+             start=mid+1;
 
             }
 
