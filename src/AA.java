@@ -26,39 +26,4 @@ class AA {
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-    public static void ff(int[]arr,int r,int c,int max){
-        if(r==0)return;
-        if(r>c) {
-            if (arr[c+1] > arr[max]) {
-                ff(arr, r, c + 1, c+1);
-            }
-            else ff(arr,r,c+1,max);
-
-        }
-        else{
-
-                int temp =arr[max];
-                arr[max]=arr[r];
-                arr[r]=temp;
-            ff(arr,r-1,0,0);
-            }
-
-
-    }
-
-
-
-
 }
