@@ -1,29 +1,46 @@
-import java.util.Arrays;
+import java.util.*;
+import java.io.*;
+import java.math.BigDecimal;
 
-class AA {
+class AA{
     public static void main(String[] args) {
-        int []arr={1,4,5,3,2};
-        ff(1,4,arr,1);
-        System.out.println(Arrays.toString(arr));
+        int[]arr={5,4,6,3,2,1};
+        int []ans=mergeSort(arr);
+        System.out.println(Arrays.toString(ans));
+    }
+
+    public static int[] mergeSort(int[]arr){
+        if(arr.length==1) return arr;
+        int mid =arr.length/2;
+        int[]left=mergeSort(Arrays.copyOfRange(arr,0,mid));
+        int[] right = mergeSort(Arrays.copyOfRange(arr,mid,arr.length));
+        return merge(left,right);
+
 
     }
 
+    public static int[]merge(int[]left,int[]right) {
+        int t, l, r;
 
-    public static void ff(int col , int row,int[]arr,int i){
-        if(row<1)return;
-        if(col!=0){
-            if(arr[col]<arr[col-1]){
-                int temp =arr[col];
-                arr[col]=arr[col-1];
-                arr[col-1]=temp;
-                ff(col-1,row,arr,i);
+        t = l = r = 0;
+        int[] mix = new int[left.length + right.length];
+        while (l < left.length && r < right.length) {
+            if (left[l] < right[r]) {
+                mix[t++] = left[l++];
+            } else {
+                mix[t++] = right[r++];
             }
-            else   ff(0,row,arr,i);
 
         }
-        else {
-            ff(i+1,row-1,arr,i+1);
+        while (l < left.length) {
+            mix[t++] = left[l++];
+
         }
+        while (r< right.length) {
+            mix[t] = right[r];
+            t++;
+            r++;
+        }
+        return mix;
     }
-
 }
