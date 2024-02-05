@@ -35,9 +35,7 @@ public class InPlace_MergeSort {
         while(j<e){
             mix[k++]=arr[j++];
         }
-        for (int l = 0; l < k; l++) {
-            arr[s+l]=mix[l];
-        }
+        if (k >= 0) System.arraycopy(mix, 0, arr, s , k);
     }
 
 
