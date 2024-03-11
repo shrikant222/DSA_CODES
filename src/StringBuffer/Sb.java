@@ -4,7 +4,7 @@ public class Sb {
 
 
     public static void main(String[] args) {
-        StringBuffer sb=new StringBuffer();
+        StringBuilder sb=new StringBuilder(1);
         StringBuffer sb1=new StringBuffer(30);
         StringBuffer sb2=new StringBuffer("hello");
         System.out.println(sb.capacity());

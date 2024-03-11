@@ -9,6 +9,7 @@ import java.util.List;
 public class Lists {
 
     public static void main(String[] args) {
+
         List<Integer> a = new ArrayList<Integer>();
 //      parent a = child class
         ArrayList b = new ArrayList();

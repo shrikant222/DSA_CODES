@@ -2,7 +2,7 @@ package LinkedList;
 class LL{
     private int size=0;
     private Node head,tail;
-    public void psize(){
+    public void size(){
         System.out.println(size);
     }
 
@@ -18,26 +18,68 @@ class LL{
 
 
     }
-    public int delete(int index){
-        Node temp=head;
-        Node temp2;
-        for (int i = 1; i < index; i++) {
-            temp=temp.next;
+
+    public int delete(int index) {
+        if (head == null) {
+            System.out.println("List is empty");
+            return -1;
         }
-        temp2=temp.next;
-        int v=temp2.val;
-        temp2=temp2.next;
 
-        temp.next=temp2;
+        if (index < 0 || index >= size) {
+            System.out.println("Index out of bounds");
+            return -1;
+        }
 
-        return v;
+        int deletedValue;
+        if (index == 0) {
+            deletedValue = head.val;
+            head = head.next;
+            if (head == null) {
+                tail = null;
+            }
+        } else {
+            Node prev = head;
+            for (int i = 0; i < index - 1; i++) {
+                prev = prev.next;
+            }
+            deletedValue = prev.next.val;
+            prev.next = prev.next.next;
+            if (prev.next == null) {
+                tail = prev;
+            }
+        }
+        size--;
+        return deletedValue;
     }
+
+//    public int delete(int index){
+//        if(head==tail){
+//            tail=null;
+//            head=null;
+//            return -1;
+//        }
+//        Node temp=head;
+//        Node temp2;
+//        for (int i = 1; i < index; i++) {
+//            temp=temp.next;
+//        }
+//        temp2=temp.next;
+//        int v=temp2.val;
+//        temp2=temp2.next;
+//
+//        temp.next=temp2;
+//
+//        return v;
+//    }
 
 
     public void insert(int val,int index){
         var node = new Node(val);
         if(index==0){ insertAtStart(val);
             return;}
+        if(index>size+1||index<0){
+            System.out.println("Index out of bound");
+        }
         if(size+1==index) {
             insertAtEnd(val);
             return;}
@@ -71,7 +113,7 @@ class LL{
 
     public void insertAtEnd(int val){
         Node node = new Node(val);
-        if(tail==null){
+        if(head==null){
             tail=node;
             head=tail;
         }else {

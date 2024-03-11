@@ -22,18 +22,18 @@ public class RotatedBS {
    }
   }
   else{
-   if(arr[mid]<=taget&&taget<=arr[end]){
+    if(arr[mid]<=taget&&taget<=arr[end]){
     return RBS(arr, taget,mid+1,end);
    }
-   else{
+    else{
     return RBS(arr,  taget,start,mid-1);
+    }
    }
-  }
  }
 
  public static void main(String[] args) {
   int []arr={5,5,6,6,6,7,8,1,2,3,4,4,4};
-  System.out.println(RBS(arr,3,0, arr.length-1));
+  System.out.println(RBS(arr,5,0, arr.length-1));
  }
 
 

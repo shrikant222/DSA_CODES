@@ -19,7 +19,7 @@ public class CyclicSort {
     }
     public static void main(String[] args) {
         //starting from 0 therefore index==element
-        int []arr={1,2,2,4};
+        int []arr={2,5,3,1};;
         System.out.println(Arrays.toString(arr));
         sort(arr);
         System.out.println(Arrays.toString(arr));

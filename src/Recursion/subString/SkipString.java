@@ -1,4 +1,6 @@
-class AA {
+package Recursion.subString;
+
+public class SkipString {
 
     public static void main(String[] args) {
 
@@ -15,6 +17,4 @@ class AA {
             return up.charAt(0)+ff(up.substring(1));
         }
     }
-
-
 }

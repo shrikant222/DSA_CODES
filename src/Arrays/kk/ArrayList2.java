@@ -10,6 +10,7 @@ public class ArrayList2 {
     public static void main(String[] args) {
         int [] arr = new int[10];
         List<String> one= new ArrayList<String>();
+
         ArrayList<Boolean> two= new ArrayList<>();
         ArrayList<Integer> three= new ArrayList<>();
         ArrayList<Boolean> four= new ArrayList<>();
@@ -18,11 +19,15 @@ public class ArrayList2 {
 
 
         ArrayList<Integer> list = new ArrayList<>();
+        StringBuilder Sb = new StringBuilder();
+        String s="jjjj";
+        Sb.append(s.charAt(0));
 
         //Add() method
         one.add("hello");
         one.add("two");
         one.add("three");
+        System.out.println(one.contains("two"));
         System.out.println(one);
         one.add(0,"newtwo");
         System.out.println(one);

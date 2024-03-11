@@ -25,8 +25,8 @@ public class Find_All_index {
         ArrayList<Integer> list2 = new ArrayList<>();
         if(index==arr.length) return list2;
         if(target==arr[index])list2.add(index);
-//        ArrayList<Integer> ansfromBelowCalls =index2(arr,target,index+1);
-        list2.addAll(index2(arr,target,index+1));
+        ArrayList<Integer> ansfromBelowCalls =index2(arr,target,index+1);
+        list2.addAll(ansfromBelowCalls);
         return list2;
     }
 

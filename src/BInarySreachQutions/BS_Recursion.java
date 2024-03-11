@@ -14,7 +14,7 @@ public class BS_Recursion {
 
     }
     public static void main(String[] args) {
-        int arr []={1,2,6,9,10,15,20};
+        int[] arr ={1,2,6,9,10,15,20};
         System.out.println(BS(arr,6,0,arr.length-1));
     }
 }
