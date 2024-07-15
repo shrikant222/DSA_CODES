@@ -34,7 +34,7 @@ public class Main {
     }
 }
 
-class Solution {
+class Solution1 {
     public int[] smallerNumbersThanCurrent(int[] nums) {
         int[] ans=new int[nums.length];
 

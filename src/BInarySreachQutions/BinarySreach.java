@@ -25,10 +25,10 @@ public class BinarySreach {
         return -1;
     }
     public static void main(String[] args) {
-        int [] arr={0,1,2,3,4,6,7,8};
+        int [] arr={10,20,30,30,40,50,60,70,75,100};
         int size = Integer.SIZE; // Size of int in bits
         System.out.println(size);
-        System.out.println( binary(arr,4));
+        System.out.println( binary(arr,35));
 
     }
 }

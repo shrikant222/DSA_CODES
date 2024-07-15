@@ -2,7 +2,7 @@ package LeetQutions;
 
 import java.util.Arrays;
 //https://leetcode.com/problems/find-the-duplicate-number/description/
-public interface LEET287 {
+public class LEET287 {
     public static int findDuplicate(int[] nums) {
         int i = 0;
         while (i < nums.length) {
@@ -35,6 +35,6 @@ public interface LEET287 {
         //starting from 0 therefore index==element
         int []arr={1,3,3,4,2,2};
         System.out.println(Arrays.toString(arr));
-        System.out.println(findDuplicate2(arr));
+        System.out.println(findDuplicate(arr));
     }
 }

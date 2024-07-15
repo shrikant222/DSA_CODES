@@ -4,7 +4,7 @@ public class ReverseString {
 
 
 
-    //less efficent as every time new string object being created in sting pool
+    //less efficient as every time new string object being created in sting pool
     public String rev(String orgi){
         String rev="";
 

@@ -19,6 +19,6 @@ public class Count_zeros {
 
 
     public static void main(String[] args) {
-        System.out.println(zcount(36011001,0));
+        System.out.println(count(36011001));
     }
 }

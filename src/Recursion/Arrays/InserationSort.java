@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 
 
-    class AA {
+     class AA {
         public static void main(String[] args) {
             int []arr={1,4,5,3,2};
             ff(1,4,arr,1);

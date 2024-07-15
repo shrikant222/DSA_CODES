@@ -24,7 +24,7 @@ class LEET645 {
         }
         return ans;
     }
-  static int missingNumber(int array[], int n) {
+  static int missingNumber(int array[]) {
         int i=0;
         while(i<array.length){
             int corr=array[i]-1;
@@ -47,8 +47,9 @@ class LEET645 {
     }
     public static void main(String[] args) {
         //starting from 0 therefore index==element
-        int []arr={1 ,2, 3,4, 5,7,8,9};
+        int []arr={2,1,4,2,6,5};
+
+        System.out.println(missingNumber(arr));
         System.out.println(Arrays.toString(arr));
-        System.out.println(missingNumber(arr,5));
     }
 }

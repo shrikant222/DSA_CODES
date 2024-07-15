@@ -5,7 +5,7 @@ public class Using_recurssion {
         if (start > end) {
             return -1; // Target not found
         }
-        int mid=(start+end)/2;
+        int mid=start+(end-start)/2;
         if(arr[mid]==target)
         {
             return mid;
@@ -23,6 +23,6 @@ public class Using_recurssion {
 
     public static void main(String[] args) {
         int [] arr={10,20,30,40,50};
-        System.out.println(  sreach(arr,0,4,60));
+        System.out.println(  sreach(arr,0,4,50));
     }
 }

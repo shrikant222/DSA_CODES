@@ -7,7 +7,6 @@ import java.util.Arrays;
  class SelectionSorting {
     static void sort(int[] arr){
         for (int i = 0; i <arr.length ; i++) {
-
          int min=minIndex(arr,i);
          swapp(arr,i,min);
         }

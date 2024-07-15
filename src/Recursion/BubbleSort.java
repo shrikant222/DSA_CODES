@@ -3,21 +3,22 @@ package Recursion;
 import java.util.Arrays;
 
 public class BubbleSort {
-    public static void sort(int[]arr, int row, int col){
-        if(row==0) return;
+    public static void sort(int[]arr, int last, int first){
+        if(last==0) return;
 
-        if(col<row)
+       if(first<last)
+
         {
-            if (arr[col] > arr[col + 1]) {
-                int temp = arr[col];
-                arr[col] = arr[col + 1];
-                arr[col + 1] = temp;
+            if (arr[first] > arr[first + 1]) {
+                int temp = arr[first];
+                arr[first] = arr[first + 1];
+                arr[first + 1] = temp;
             }
-            sort(arr, row, col+1);
+            sort(arr, last, first+1);
 
         }
         else {
-                sort(arr, row - 1, 0);
+                sort(arr, last - 1, 0);
             }
 
     }

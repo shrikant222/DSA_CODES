@@ -1,6 +1,7 @@
 package Recursion;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class SelectionSort {
 
@@ -24,8 +25,8 @@ public class SelectionSort {
         else
         {
             int temp=arr[max];
-            arr[max]=arr[col];
-            arr[col]=temp;
+            arr[max]=arr[row];
+            arr[row]=temp;
             sort(arr,row-1,0,0);
         }
 
@@ -36,6 +37,11 @@ public class SelectionSort {
         int[]arr={5,1,4,3,2};
         sortO(arr);
         System.out.println(Arrays.toString(arr));
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        char b=sc.next().charAt(0);
+        String c=sc.nextLine();
+        sc.close();
     }
 
 

@@ -1,7 +1,7 @@
 package BInarySreachQutions;
 
  class OrderAgnosticBS {
-    static int sreach(int [] arr,int target) {
+    static int search(int [] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
         boolean tORf=arr[0] < arr[end];
@@ -43,8 +43,8 @@ package BInarySreachQutions;
         int []arr={100,90,80,70,60,50,40,30,20,10};
         int [] arr1={10,20,30,40,50,60,70,90,100};
 
-        System.out.println( sreach(arr,12));
-         System.out.println( sreach(arr1,10));
+        System.out.println( search(arr,12));
+         System.out.println( search(arr1,10));
 
     }
     }

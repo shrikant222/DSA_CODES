@@ -2,6 +2,7 @@ package LinkedList;
 class LL{
     private int size=0;
     private Node head,tail;
+
     public void size(){
         System.out.println(size);
     }
@@ -18,8 +19,7 @@ class LL{
 
 
     }
-
-    public int delete(int index) {
+    private int check(int index){
         if (head == null) {
             System.out.println("List is empty");
             return -1;
@@ -29,27 +29,34 @@ class LL{
             System.out.println("Index out of bounds");
             return -1;
         }
+        return index;
+    }
 
-        int deletedValue;
-        if (index == 0) {
-            deletedValue = head.val;
-            head = head.next;
-            if (head == null) {
-                tail = null;
+    public int delete(int index) {
+        if (check(index) == index) {
+            int deletedValue;
+            if (index == 0) {
+                deletedValue = head.val;
+                head = head.next;
+                if (head == null) {
+                    tail = null;
+                }
             }
-        } else {
-            Node prev = head;
-            for (int i = 0; i < index - 1; i++) {
-                prev = prev.next;
+            else {
+                Node prev = head;
+                for (int i = 0; i < index - 1; i++) {
+                    prev = prev.next;
+                }
+                deletedValue = prev.next.val;
+                prev.next = prev.next.next;
+                if (prev.next == null) {
+                    tail = prev;
+                }
             }
-            deletedValue = prev.next.val;
-            prev.next = prev.next.next;
-            if (prev.next == null) {
-                tail = prev;
-            }
+            size--;
+            return deletedValue;
         }
-        size--;
-        return deletedValue;
+        return -1;
     }
 
 //    public int delete(int index){
@@ -123,7 +130,7 @@ class LL{
         size++;
     }
 
-    public int serach(int index ){
+    public int search(int index ){
         Node temp=head;
         int i=0;
         while(temp!=null){
