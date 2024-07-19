@@ -164,7 +164,7 @@ class LL{
     }
 
 
-    private static class Node{
+        private class Node{
         private Node next;
         private int val;
 
@@ -176,5 +176,9 @@ class LL{
         Node(int val){
             this.val=val;
         }
+    }
+
+    public static void main(String[] args) {
+        LL l=new LL();
     }
 }

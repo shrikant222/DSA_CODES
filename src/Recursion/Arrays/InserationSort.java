@@ -24,7 +24,7 @@ import java.util.Arrays;
                     arr[col] = arr[col - 1];
                     arr[col - 1] = temp;
                     ff(col - 1, row, arr, i);
-                } else ff(0, row, arr, i);
+                } else ff(0, row-1, arr, i+1);
 
             } else {
                 ff(i + 1, row - 1, arr, i + 1);
