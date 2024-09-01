@@ -8,7 +8,7 @@ public class BubbleSorting {
         // run the steps n-1 times
         for(int i=0;i<arr.length;i++){
             // for each step max item will come at the last respective index.
-            boolean swap =false;
+            boolean swap =true;
             for(int j=0;j<arr.length-i-1;j++)
             {
 
@@ -18,13 +18,12 @@ public class BubbleSorting {
                     int temp=arr[j];
                     arr[j]=arr[j+1];
                     arr[j+1]=temp;
-                    swap =true;
+                    swap =false;
                 }
 
 
             }
-            if(!swap)
-                break;
+            if(swap) break;
         }
         return arr;
     }

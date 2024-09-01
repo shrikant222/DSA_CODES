@@ -5,7 +5,7 @@ public class LEET33 {
 
     public static void main(String[] args) {
 
-        int[] arr = {  10,12,2,5,6,8,9};
+        int[] arr = {  10,12,13,2,5,6,8,9};
         System.out.println(pivot(arr));
         System.out.println(search(arr,2));
         int t = 2;
@@ -66,13 +66,13 @@ public class LEET33 {
         while (end >= start) {
             int mid = start + (end - start) / 2;
 
-            if (mid > start &&arr[mid] < arr[mid - 1] ) {
+            if (mid > 0 &&arr[mid] < arr[mid - 1] ) {
                 return mid-1;
             }
-         else if (mid < end && arr[mid] > arr[mid + 1]) {
+         else if (mid < arr.length - 1 && arr[mid] > arr[mid + 1]) {
                 return mid;
             }
-          else if (arr[mid] <=arr[start]) {
+          else if (arr[mid] <arr[start]) {
                 end=mid-1;
             }
             else  {

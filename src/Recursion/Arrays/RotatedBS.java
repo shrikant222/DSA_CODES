@@ -12,15 +12,20 @@ public class RotatedBS {
   if(arr[mid]==taget){
    return mid;
   }
+
   if(arr[start]<=arr[mid])
   {
+
    if(arr[start]<=taget&&taget<=arr[mid]){
     return RBS(arr,  taget,start,mid-1);
    }
    else{
     return RBS(arr, taget,mid+1,end);
    }
+
   }
+
+
   else{
     if(arr[mid]<=taget&&taget<=arr[end]){
     return RBS(arr, taget,mid+1,end);

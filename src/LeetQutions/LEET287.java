@@ -33,8 +33,9 @@ public class LEET287 {
     }
     public static void main(String[] args) {
         //starting from 0 therefore index==element
-        int []arr={1,3,3,4,2,2};
-        System.out.println(Arrays.toString(arr));
+        int []arr={1,3,4,2,5};
+
         System.out.println(findDuplicate(arr));
+        System.out.println(Arrays.toString(arr));
     }
 }

@@ -29,5 +29,6 @@ class LEET442 {
         //starting from 0 therefore index==element
         int []arr={4,3,2,7,8,2,3,1};
         System.out.println(findDuplicates(arr));
+        System.out.println(Arrays.toString(arr));
     }
 }

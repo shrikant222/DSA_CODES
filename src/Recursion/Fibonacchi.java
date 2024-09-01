@@ -3,8 +3,7 @@ package Recursion;
 public class Fibonacchi {
 
     public static int febo(int n){
-    if (n==0) return 0;
-    if (n==1) return 1;
+    if(n<=1)return n;
     return   febo(n-1) + febo(n-2);
     }
     public static int febo2(int n){

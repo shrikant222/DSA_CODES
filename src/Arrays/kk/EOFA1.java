@@ -24,10 +24,6 @@ public class EOFA1 {
 
         }
 
-        for (int[] ints : arr) {//rows
-          for(int a:ints) {
-              System.out.println(a);
-          }
-        }
+
     }
 }

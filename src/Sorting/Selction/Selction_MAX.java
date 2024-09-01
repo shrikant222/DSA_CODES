@@ -15,8 +15,7 @@ class Selction_MAX{
     {
 
         for (int i =0; i < arr.length ; i++)
-        {
-            int last= arr.length-i-1;
+        {   int last= arr.length-i-1;
             int max= 0;
             for (int j = 1; j <=last; j++)
             {

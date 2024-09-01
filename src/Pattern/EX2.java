@@ -1,6 +1,10 @@
 package Pattern;
 
 public class EX2 {
+    public static void main(String[] args) {
+        int n=5;
+        pattern6(n);
+    }
     //4
     static void priNumber(int n){
         for (int i = 1; i <=n; i++) {
@@ -88,10 +92,7 @@ public class EX2 {
 //        *
 
 
-    public static void main(String[] args) {
-        int n=5;
-        pattern6(n);
-    }
+
     static void pattern30(int n) {
 
 

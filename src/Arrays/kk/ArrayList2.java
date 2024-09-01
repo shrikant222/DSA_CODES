@@ -23,6 +23,7 @@ public class ArrayList2 {
         String s="jjjj";
         Sb.append(s.charAt(0));
 
+
         //Add() method
         one.add("hello");
         one.add("two");

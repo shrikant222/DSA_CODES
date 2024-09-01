@@ -15,6 +15,7 @@ public class BS {
     public static int[] search(int[][] arr, int target) {
         int rows = arr.length;
         int cols = arr[0].length;
+
         int Rstart = 0, Rend = cols - 1;
         int midcol=cols/2;
         if (rows == 1) {

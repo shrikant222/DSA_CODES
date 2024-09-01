@@ -19,9 +19,7 @@ public class LEET268 {
         int i=0;
         while(i< arr.length){
             int corr_inx=arr[i];
-//            if(corr_inx>arr.length-1){
-//                i++; continue;
-//            }//ignore the number who's inedx is out of bound
+
             if(corr_inx<arr.length&& arr[corr_inx]!=arr[i] ){
                 int temp=arr[corr_inx];
                 arr[corr_inx]=arr[i];

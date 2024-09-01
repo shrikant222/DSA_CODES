@@ -14,6 +14,7 @@ public class InPlace_MergeSort {
         int mid =(start+end)/2;
         mergeSort(arr,start,mid);
         mergeSort(arr,mid,end);
+
         merge(arr,start,mid,end);
 
     }

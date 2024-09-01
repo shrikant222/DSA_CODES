@@ -27,7 +27,7 @@ public class LEET41 {
     }
 
     public static void main(String[] args) {
-        int []arr={7,8,9,11,12};
+        int []arr={3,4,-1,1};
         LEET41 obj=new LEET41();
         System.out.println(obj.firstMissingPositive(arr));
         System.out.println(Arrays.toString(arr));

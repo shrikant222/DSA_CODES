@@ -3,8 +3,8 @@ package BInarySreachQutions;
 public class InfinityArray {
     // https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11};
-        System.out.println(ans(arr, 11));
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 11,12,13,14,15};
+        System.out.println(ans(arr, 15));
     }
 
     public static int ans(int[] arr, int target) {
@@ -12,7 +12,7 @@ public class InfinityArray {
         int end = 1;
         while(arr[end]<target){
             start=end+1;
-            end =end+end*2;
+            end +=end*2;
         }
         return sreach(arr,target,start,end);
     }

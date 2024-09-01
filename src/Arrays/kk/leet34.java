@@ -1,7 +1,7 @@
 package Arrays.kk;
 
 import java.util.Arrays;
-//https://leetcode.com/problems/search-in-rotated-sorted-array/
+//https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/
 public class leet34 {
     public static  int[] searchRange(int[] nums, int target) {
 

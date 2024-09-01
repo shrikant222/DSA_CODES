@@ -11,9 +11,9 @@ public class SreachIN2D {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j <arr[i].length; j++) {
             if(arr[i][j]==max){
-               flag =true;
+
                 System.out.println(i+" "+j);
-                break;
+                return true;
             }
             }
 

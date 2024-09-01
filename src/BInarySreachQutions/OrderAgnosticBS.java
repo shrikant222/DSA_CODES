@@ -20,6 +20,7 @@ package BInarySreachQutions;
                     }
                     else {start = mid + 1;}
                 }
+
                 else
                 {
                     if (arr[mid] > target)

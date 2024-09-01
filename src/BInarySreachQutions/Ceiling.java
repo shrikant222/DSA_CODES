@@ -12,7 +12,7 @@ public class Ceiling {
 
         System.out.println( ceiling(arr1,51));
 
-        System.out.println(  floor(arr1,51));
+        System.out.println(  floor(arr1,52));
 
     }
 

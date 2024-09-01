@@ -1,7 +1,7 @@
 package Recursion;
 
 public class Rev_num {
- static int rev=0;
+    static int rev=0;
     static int rev1(int n){
         if(n<=0) return n ;
         rev=rev*10+(n%10);
