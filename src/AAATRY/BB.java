@@ -1,36 +1,33 @@
 package AAATRY;
-
-/******************************************************************************
-
- Online Java Compiler.
- Code, Compile, Run and Debug java program online.
- Write your code in this editor and press "Run" button to execute it.
-
- *******************************************************************************/
-
- class Ma
+import java.util.HashSet;
+ class Main
 {
-
-    static boolean isprime(int n){
+    static boolean isPrime(int n){
         if(n<2)return false;
-        for(int i=2;i<=Math.sqrt(n);i++){
+        for (int i=2;i<=Math.sqrt(n) ;i++ ) {
             if(n%i==0)return false;
         }
         return true;
     }
 
-    static void fact(int n){
-        for(int i=2;i<=n/2;i++){
-            if(n%i==0 && isprime(i)){
-                System.out.println(i);
+    static void fun(int n){
+        HashSet<Integer> hm = new HashSet<>();
+        for(int i=2;i<=n;i++){
+            if(isPrime(i)){
+                if(hm.contains(n-i)){
+                    System.out.println(n-i+" "+i);
+                    return;
+                }
+                else{
+                    hm.add(i);
+                }
             }
         }
-        if(isprime(n))
-            System.out.println(n);
+        System.out.println("Not found");
     }
-
 
     public static void main(String[] args) {
-        fact(60);
+        fun(74);
     }
+
 }

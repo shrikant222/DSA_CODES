@@ -38,6 +38,6 @@ package AAATRY;
         }
     }
     public static void main(String[] args) {
-        System.out.print(GCD(21,35));
+        System.out.println(3/4 + 1/7);
     }
 }

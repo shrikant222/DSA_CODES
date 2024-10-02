@@ -1,5 +1,7 @@
 package AAATRY;
 
+import java.util.Scanner;
+
 public class stringQun {
     static boolean palindrome(String str) {
         for (int i = 0; i <=str.length()/2; i++) {
@@ -45,8 +47,57 @@ public class stringQun {
         return sb.toString();
     }
 
-    public static void main(String[] args) {
-        System.out.println(fun("JaVa"));
-
+    public static boolean pali(int i, String str) {
+    if(i>str.length()/2){
+        return true;
     }
+    if(str.charAt(i)==str.charAt(str.length()-1-i)){
+        return pali(i+1,str);
+    }
+    return false;
+    }
+
+
+    public static void add(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter char");
+        String st = sc.nextLine();
+        String ans = "";
+        int sum = 0;
+        for (int i = 0; i < st.length(); i++) {
+
+            if ((st.charAt(i) >= '0') && (st.charAt(i) <= '9')) {
+                while (i<st.length()&& (st.charAt(i) >= '0') && (st.charAt(i) <= '9')) {
+                    ans = ans + st.charAt(i);
+                    i++;
+                }
+                int temp = Integer.parseInt(ans);
+                sum += temp;
+                ans = "";
+            }
+
+
+        }
+        System.out.println(sum);
+    }
+
+
+            public static void main(String[] args) {
+                Scanner sc = new Scanner(System.in);
+                System.out.println("Enter char");
+                String str=sc.nextLine();
+                str = Character.toUpperCase(str.charAt(0)) + str.substring(1);
+                str = str.substring(0,str.length()-1)+ Character.toUpperCase(str.charAt(str.length()-1)) ;
+                for(int i=1;i<str.length()-1;i++){
+                    if(str.charAt(i)==' '){
+                        str=str.substring(0,i-1)+Character.toUpperCase(str.charAt(i-1))+str.substring(i);
+                        str=str.substring(0,i+1)+Character.toUpperCase(str.charAt(i+1))+str.substring(i+1);
+                    }
+                }
+
+                System.out.println(str);
+
+
+        }
+
 }

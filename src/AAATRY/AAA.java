@@ -97,4 +97,47 @@ class Solution11 {
 
         System.out.println(list);
     }
+
+//    public static boolean fin(int[][]matrxi, int k){
+//        int row=matrxi.length/2;
+//        int col=matrxi[0].length/2;
+//
+//        while(row<matrxi.length&&col>=0){
+//            if(matrxi[row][col]==k){return true;}
+//            if(matrxi[row][col]>k){
+//                if(row>0)row--;
+//                else{
+//                    if(!BS(matrxi,k)){
+//
+//                    }
+//                }
+//            }
+//            else{
+//                if(row<matrxi.length){
+//                    if(row< matrxi.length-1)row++;
+//                    else{
+//                        BS();
+//                    }
+//                }
+//            }
+//        }
+//    }
+    public static boolean  BS(int[][]arr, int k,int row, int start, int end){
+
+        while(start<end){
+            int mid=start+(end-start)/2;
+            if(arr[row][mid]==k){
+                return true;
+            }else if(arr[row][mid]<k){
+                start=mid+1;
+
+            }
+            else {
+                end=mid-1;
+            }
+        }
+        return false;
+    }
+
+
 }
