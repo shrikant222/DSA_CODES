@@ -9,42 +9,25 @@ public class ArrayList2 {
 
     public static void main(String[] args) {
         int [] arr = new int[10];
-        List<String> one= new ArrayList<String>();
-
-        ArrayList<Boolean> two= new ArrayList<>();
-        ArrayList<Integer> three= new ArrayList<>();
-        ArrayList<Boolean> four= new ArrayList<>();
-        ArrayList<Double> five= new ArrayList<>();
-        ArrayList<Character> six= new ArrayList<>();
+        List<String> one= new ArrayList<>();
 
 
-        ArrayList<Integer> list = new ArrayList<>();
-        StringBuilder Sb = new StringBuilder();
-        String s="jjjj";
-        Sb.append(s.charAt(0));
+        ArrayList<Integer> o= new ArrayList<>();
 
 
-        //Add() method
-        one.add("hello");
-        one.add("two");
-        one.add("three");
-        System.out.println(one.contains("two"));
-        System.out.println(one);
-        one.add(0,"newtwo");
-        System.out.println(one);
-        System.out.println( one.isEmpty());
-        System.out.println(one.get(0));
+        o.add(1);
+        o.add(2);
+        o.add(3);
+        o
+                .add(4);
 
-        //get() method
-        //set() method
-        one.set(0,"zero");// change newtwo to zero;
-//       // 0 ref to ->newtwo
-        // now ref to-> zero    // now newtwo does not have an ref variable so object removed from memory by garbage collector
-        one.remove("zeo");
-        System.out.println(one);
+        System.out.println(o);
 
-        System.out.println(one.size());
-        one.clear();        System.out.println(one.size());
+        int temp=o.get(0);
+        o.set(0,o.get(1));
+        o.set(1,temp);
+
+        System.out.println(o);
 
 
 

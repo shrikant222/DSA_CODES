@@ -3,7 +3,7 @@ package StringEXP;
 public class Palidrome {
 
 public static boolean pali(String str){
-    if(str==null||str.length()==0){
+    if(str==null|| str.isEmpty()){
         return true;
     }
     for (int i = 0; i <str.length()/2 ; i++) {

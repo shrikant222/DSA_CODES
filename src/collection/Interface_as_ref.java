@@ -11,7 +11,7 @@ class MyClass implements MyInterface {
         System.out.println("Implementation of myMethod");
     }
     public void h(){
-
+        // TODO document why this method is empty
     }
 }
 

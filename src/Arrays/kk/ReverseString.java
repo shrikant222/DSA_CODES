@@ -8,8 +8,11 @@ public class ReverseString {
     public String rev(String orgi){
         String rev="";
 
-        for(int i=orgi.length()-1;i>=0; i--){
-            rev=rev+orgi.charAt(i);
+//        for(int i=orgi.length()-1;i>=0; i--){
+//            rev=rev+orgi.charAt(i);
+//        }
+        for(int i=0;i<orgi.length();i++){
+            rev=orgi.charAt(i)+rev;
         }
         return rev;
     }
@@ -30,7 +33,7 @@ public class ReverseString {
         System.out.println("Enter the string ");
         String str = sc.nextLine();
         ReverseString o = new ReverseString();
-        System.out.println(o.rev1(str));
+        System.out.println(o.rev(str));
 
     }
 }

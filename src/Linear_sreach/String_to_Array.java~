@@ -6,8 +6,8 @@ public class String_to_Array {
     public static void main(String[] args) {
         int [][]arr=
                 {{2,3,4},
-                {2,4,10},
-                {10,22,33}
+                  {2,4,10},
+                        {10,22,33}
 
                 };
 

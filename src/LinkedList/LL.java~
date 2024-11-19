@@ -276,7 +276,9 @@ class LL{
     }
 
     void r(){
+        ListNode temp=head;
         ListNode newNode=null;
+
         while(head !=null){
             ListNode next=head.next;
             head.next=newNode;
@@ -291,6 +293,7 @@ class LL{
     void r1() {
         ListNode temp = head;
         ListNode newNode = null;
+
         while (temp != null) {
             ListNode next = temp.next;
             temp.next = newNode;

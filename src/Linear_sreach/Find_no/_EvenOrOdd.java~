@@ -15,7 +15,7 @@ public class _EvenOrOdd {
         int count=0;
 
             for(int j=0;j< arr.length;j++){
-                if(even(arr[j])) {
+                if(Even(arr[j])) {
                     count++;
                 }
             }
